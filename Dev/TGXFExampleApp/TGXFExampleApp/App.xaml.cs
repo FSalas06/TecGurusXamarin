@@ -7,11 +7,13 @@ namespace TGXFExampleApp
 {
     public partial class App : Application
     {
+        public static INavigation Navigation { get; set; }
 
         public App()
         {
             InitializeComponent();
             MainPage = new MasterDetailPageMenu();
+            App.Navigation = MainPage.Navigation;
         }
 
         protected override void OnStart()
