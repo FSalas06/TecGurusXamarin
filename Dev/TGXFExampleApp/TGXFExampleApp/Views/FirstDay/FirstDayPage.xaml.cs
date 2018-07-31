@@ -1,20 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using TGXFExampleApp.ViewModels.FirstDay;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace TGXFExampleApp.Views.FirstDay
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class FirstDayPage : ContentPage
+    public partial class FirstDayPage : ContentPage
 	{
+        FirstDayViewModel _viewModel;
+
 		public FirstDayPage ()
 		{
 			InitializeComponent ();
+            NavigationPage.SetHasNavigationBar(this, false);
+            BindingContext = _viewModel = new FirstDayViewModel();
 		}
-	}
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            _viewModel?.OnAppearing();
+        }
+
+        void Handle_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if(e.SelectedItem == null)
+            {
+                return;
+            }
+            ((ListView)sender).SelectedItem = null;
+        }
+    }
 }

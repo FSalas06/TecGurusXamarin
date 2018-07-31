@@ -1,13 +1,12 @@
-﻿
-using Android.App;
-using Android.Content.PM;
+﻿using Android.App;
 using Android.OS;
 
 namespace TGXFExampleApp.Droid
 {
     [Activity(Label = "TGXF Example App", 
               Icon = "@mipmap/icon", 
-              Theme = "@style/MainTheme") 
+              Theme = "@style/MainTheme",
+              MainLauncher = true) 
               ]
     public class MainActivity : Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
