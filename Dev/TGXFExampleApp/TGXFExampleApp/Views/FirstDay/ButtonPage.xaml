@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="TGXFExampleApp.Views.FirstDay.ButtonPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <StackLayout
+            Padding="20"
+            Spacing="30">
+            <Button Text="Alert" Command="{Binding AlertShowCommand}"/>
+            <Button Text="Options" Command="{Binding ActionSheetCommand}"/>
+            <Button Style="{StaticResource ButtonAccept}" Command="{Binding YesNoAlertCommand}"/>
+            <Button Style="{StaticResource ButtonCancel}" Command="{Binding YesNoAlertCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

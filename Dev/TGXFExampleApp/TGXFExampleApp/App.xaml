@@ -4,16 +4,58 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <Application.Resources>
-        <ResourceDictionary>
+        <ResourceDictionary>       
+            <!--color palette-->
+            <Color x:Key="MountainMeadow">#21D389</Color>
+            <Color x:Key="Mystic">#CFD6D2</Color>
+            <Color x:Key="OceanGreen">#52B77B</Color>
+            <Color x:Key="BondiBlue">#0E93B5</Color>
             <!--  Global Styles  -->
-            <Color x:Key="NavigationPrimary">#21d389</Color>
+            <!--Pages-->
             <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="BarBackgroundColor" Value="{StaticResource MountainMeadow}" />
                 <Setter Property="BarTextColor" Value="White" />
             </Style>
-            <Color x:Key="ContentPrimary">#EEEFF6</Color>
             <Style TargetType="ContentPage">
-                <Setter Property="BackgroundColor" Value="{StaticResource ContentPrimary}" />
+                <Setter Property="BackgroundColor" Value="{StaticResource Mystic}" />
+            </Style>
+            <!--BoxView-->
+            <Style TargetType="BoxView" x:Key="BoxviewBlue">
+                <Setter Property="Color" Value="Blue" />
+                <Setter Property="WidthRequest" Value="80" />
+                <Setter Property="HeightRequest" Value="80" />
+            </Style>
+            <Style TargetType="BoxView" x:Key="BoxviewRed">
+                <Setter Property="Color" Value="Red" />
+                <Setter Property="WidthRequest" Value="80" />
+                <Setter Property="HeightRequest" Value="80" />
+            </Style>
+            <!--Button-->
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource BondiBlue}" />
+                <Setter Property="BorderRadius" Value="10" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="BorderColor" Value="Black" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Image" Value="cog.png" />
+            </Style>
+            <Style TargetType="Button" x:Key="ButtonAccept">
+                <Setter Property="BackgroundColor" Value="{StaticResource OceanGreen}" />
+                <Setter Property="BorderRadius" Value="10" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="BorderColor" Value="Black" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Image" Value="success.png" />
+                <Setter Property="Text" Value="Accept" />
+            </Style>
+            <Style TargetType="Button" x:Key="ButtonCancel">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="BorderRadius" Value="10" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="BorderColor" Value="Black" />
+                <Setter Property="TextColor" Value="{StaticResource OceanGreen}" />
+                <Setter Property="Image" Value="error.png" />
+                <Setter Property="Text" Value="Cancel" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>

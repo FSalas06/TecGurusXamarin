@@ -1,27 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using TGXFExampleApp.Models;
 using TGXFExampleApp.Views.FirstDay;
 
 namespace TGXFExampleApp.Views
 {
-    public class OptionItems
+    public static class OptionItems
     {
-        public ObservableCollection<OptionsItemMenu> Option
+        public static ObservableCollection<OptionsItemMenu> OptionMenuItems()
         {
-            get;
-            set;
-        }
-
-        public OptionItems()
-        {
-            Option = new ObservableCollection<OptionsItemMenu>
+            ObservableCollection<OptionsItemMenu> Option = new ObservableCollection<OptionsItemMenu>
             {
-                //
                 new OptionsItemMenu
                 {
-                    TitleOption = "Styles",
-                    TargetType = typeof(BoxViewPage),
+                    TitleOption = "Buttons",
+                    TargetType = typeof(ButtonPage),
                     Group = 0
                 },
 
@@ -32,27 +26,41 @@ namespace TGXFExampleApp.Views
                     Group = 0
                 },
 
-				new OptionsItemMenu
+                new OptionsItemMenu
                 {
-                    TitleOption = "label",
-                    TargetType = typeof(BoxViewPage),
+                    TitleOption = "Picker",
+                    TargetType = typeof(PickerPage),
                     Group = 0
                 },
 
-				new OptionsItemMenu
+                new OptionsItemMenu
                 {
                     TitleOption = "label",
                     TargetType = typeof(BoxViewPage),
                     Group = 1
                 },
 
-				new OptionsItemMenu
+                new OptionsItemMenu
                 {
                     TitleOption = "label",
                     TargetType = typeof(BoxViewPage),
                     Group = 1
                 }
             };
+            return Option;
+        }
+
+        public static Dictionary<string, int> OptionPickerItem()
+        {
+            Dictionary<string, int> PickerItem = new Dictionary<string, int>
+            {
+                {"Option 1",1},
+                {"Option 2",2},
+                {"Option 3",3},
+                {"Option 4",4},
+            };
+
+            return PickerItem;
         }
     }
 }

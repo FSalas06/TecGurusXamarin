@@ -19,5 +19,6 @@
   <ItemGroup>
     <Compile Remove="ViewModels\FirstDayViewModel.cs" />
     <Compile Remove="ViewModels\FirstDay\BoxViewPage.xaml.cs" />
+    <Compile Remove="Views\FirstDay\PickerPage.cs" />
   </ItemGroup>
 </Project>

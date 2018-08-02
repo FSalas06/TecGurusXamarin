@@ -60,53 +60,37 @@
                     <BoxView
                         Grid.Row="0"
                         Grid.Column="0"
-                        WidthRequest="80"
-                        HeightRequest="90"
-                        Color="Red" />
+                        Style="{StaticResource BoxviewRed}" />
 
                     <BoxView
                         Grid.Row="0"
                         Grid.Column="1"
-                        WidthRequest="80"
-                        HeightRequest="90"
-                        Color="Blue" />
+                        Style="{StaticResource BoxviewBlue}" />
 
                     <BoxView
                         Grid.Row="0"
                         Grid.Column="2"
-                        WidthRequest="80"
-                        HeightRequest="90"
-                        Color="Red" />
+                        Style="{StaticResource BoxviewRed}" />
                     <BoxView
                         Grid.Row="0"
                         Grid.Column="3"
-                        WidthRequest="80"
-                        HeightRequest="90"
-                        Color="Blue" />
+                        Style="{StaticResource BoxviewBlue}" />
                     <BoxView
                         Grid.Row="1"
                         Grid.Column="0"
-                        WidthRequest="80"
-                        HeightRequest="90"
-                        Color="Blue" />
+                        Style="{StaticResource BoxviewBlue}" />
                     <BoxView
                         Grid.Row="1"
                         Grid.Column="1"
-                        WidthRequest="80"
-                        HeightRequest="90"
-                        Color="Red" />
+                        Style="{StaticResource BoxviewRed}" />
                     <BoxView
                         Grid.Row="1"
                         Grid.Column="2"
-                        WidthRequest="80"
-                        HeightRequest="90"
-                        Color="Blue" />
+                        Style="{StaticResource BoxviewBlue}" />
                     <BoxView
                         Grid.Row="1"
                         Grid.Column="3"
-                        WidthRequest="80"
-                        HeightRequest="90"
-                        Color="red" />
+                        Style="{StaticResource BoxviewRed}" />
                 </Grid>
             </Grid>
         </ScrollView>

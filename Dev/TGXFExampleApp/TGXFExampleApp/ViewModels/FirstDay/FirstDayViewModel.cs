@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
+using System.Windows.Input;
 using TGXFExampleApp.Models;
 using TGXFExampleApp.ViewModels.Shared;
 using TGXFExampleApp.Views;
@@ -28,7 +29,10 @@ namespace TGXFExampleApp.ViewModels.FirstDay
                 {
                     return;
                 }
-                SelectedOption.Execute(_singleOption);
+                if(SelectedOption.CanExecute(_singleOption))
+                {
+                    SelectedOption.Execute(_singleOption);
+                }
             }
         }
 
@@ -45,18 +49,11 @@ namespace TGXFExampleApp.ViewModels.FirstDay
             }
         }
 
-        public OptionItems Options
-        {
-            get;
-            set;
-        }
-
-        public Command SelectedOption { get; set; }
+        public ICommand SelectedOption { get; set; }
 
         public FirstDayViewModel()
         {
             MenuOptions = new ObservableCollection<OptionsItemMenu>();
-            Options = new OptionItems();
             SelectedOption = new Command<OptionsItemMenu>(OptionSelected);
         }
 
@@ -64,14 +61,13 @@ namespace TGXFExampleApp.ViewModels.FirstDay
         {
             base.OnAppearing();
             LoadFirstDay();
-
         }
 
         private void LoadFirstDay()
         {
             try
             {
-                MenuOptions = Options.Option;
+                MenuOptions = OptionItems.OptionMenuItems();
             }
             catch (Exception ex)
             {
