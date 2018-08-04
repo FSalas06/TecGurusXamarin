@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppEjemplo.PageExample">
+    <ContentPage.Content>
+        <StackLayout 
+            Spacing="10" 
+            BackgroundColor="Gold">
+            <Button 
+                x:Name="btn1"
+                Text="Click!" 
+                Clicked="btn1_Clicked"
+                BackgroundColor="Red" 
+                BorderColor="Green" 
+                BorderRadius="6" 
+                BorderWidth="3"/>
+            <Label x:Name="lb1" TextColor="White" FontSize="Large" />
+            <Image Source="logo.png"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

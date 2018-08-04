@@ -1,1 +1,10 @@
 Dev/TGXFExampleApp/.mfractor
+Dev/AppEjemplo/.vs/
+Dev/AppEjemplo/AppEjemplo/AppEjemplo.Android/bin/
+Dev/AppEjemplo/AppEjemplo/AppEjemplo.Android/obj/AppEjemplo.Android.csproj.nuget.g.props
+Dev/AppEjemplo/AppEjemplo/AppEjemplo.Android/obj/
+Dev/AppEjemplo/AppEjemplo/AppEjemplo.iOS/obj/AppEjemplo.iOS.csproj.nuget.g.props
+Dev/AppEjemplo/AppEjemplo/AppEjemplo.iOS/obj/iPhoneSimulator/Debug/AppEjemplo.iOS.csproj.CopyComplete
+Dev/AppEjemplo/AppEjemplo/AppEjemplo.iOS/obj/
+Dev/AppEjemplo/AppEjemplo/AppEjemplo/obj/
+Dev/AppEjemplo/AppEjemplo/AppEjemplo/bin/
