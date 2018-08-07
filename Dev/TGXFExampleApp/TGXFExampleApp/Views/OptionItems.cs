@@ -11,7 +11,7 @@ namespace TGXFExampleApp.Views
     {
         public static ObservableCollection<OptionsItemMenu> OptionMenuItems(int day)
         {
-            List<OptionsItemMenu> Opt = new List<OptionsItemMenu>
+            var Opt = new List<OptionsItemMenu>
             {
                 new OptionsItemMenu
                 {
@@ -47,6 +47,13 @@ namespace TGXFExampleApp.Views
                     TargetType = typeof(ProgressBarPage),
                     Group = 1
                 },
+
+                new OptionsItemMenu
+                {
+                    TitleOption = "SearchBar",
+                    TargetType = typeof(SearchBarPage),
+                    Group = 1
+                },
                
             };
 
@@ -67,6 +74,35 @@ namespace TGXFExampleApp.Views
             };
 
             return PickerItem;
+        }
+
+        public static List<SupermarketItems> SuperMarketList()
+        {
+            var Items = new List<SupermarketItems>
+            {
+                new SupermarketItems
+                {
+                    Name = "Tomatoes",
+                    Price = 20.30,
+                    Group = "Vegetables"
+                },
+
+                new SupermarketItems
+                {
+                    Name = "Apple",
+                    Price = 20.30,
+                    Group = "Fruit"
+                },
+
+                new SupermarketItems
+                {
+                    Name = "Orange",
+                    Price = 20.30,
+                    Group = "Fruit"
+                },
+            };
+
+            return Items;
         }
     }
 }

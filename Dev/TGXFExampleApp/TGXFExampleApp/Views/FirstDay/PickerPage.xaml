@@ -6,17 +6,11 @@
     <ContentPage.Content>
         <StackLayout Padding="20">
             <Picker
-                SelectedIndex="{Binding ItemPickerIndex}"
                 Title="App picker"
-                ItemsSource="{Binding PickerListItem}" />
+                ItemsSource="{Binding PickerListItem}"
+                SelectedIndex="{Binding ItemPickerIndex}" />
 
-            <DatePicker 
-                Format="dd MM, yyyy"
-                TextColor="Maroon"
-                
-            />
-                
-            
+            <DatePicker Format="dd MM, yyyy" TextColor="Maroon"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
