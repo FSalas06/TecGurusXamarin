@@ -17,15 +17,17 @@
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout
+                                    Padding="10"
                                     HorizontalOptions="FillAndExpand"
-                                    Orientation="Horizontal"
-                                    Padding="10">
-                                    <Label Text="{Binding Name}" VerticalTextAlignment="Center" />
+                                    Orientation="Horizontal">
+                                    <Label
+                                        Text="{Binding Name}"
+                                        VerticalTextAlignment="Center" />
                                     <Image
-                                        WidthRequest="20"
                                         HeightRequest="20"
                                         HorizontalOptions="EndAndExpand"
-                                        Source="next.png" />
+                                        Source="next.png"
+                                        WidthRequest="20" />
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>

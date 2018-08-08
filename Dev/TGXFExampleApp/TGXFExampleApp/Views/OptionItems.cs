@@ -54,7 +54,14 @@ namespace TGXFExampleApp.Views
                     TargetType = typeof(SearchBarPage),
                     Group = 1
                 },
-               
+
+                new OptionsItemMenu
+                {
+                    TitleOption = "Stepper",
+                    TargetType = typeof(StepperPage),
+                    Group = 1
+                },
+
             };
 
             ObservableCollection<OptionsItemMenu> Option = 
