@@ -23,7 +23,7 @@ namespace TGXFExampleApp.Views.Menu
         {
             if (e.SelectedItem is MenuItemMaster item)
             {
-                Detail.Navigation.PushAsync(new NavigationPage((Page)Activator.CreateInstance(item.TargetType)));
+                Detail = new NavigationPage((Page)Activator.CreateInstance(item.TargetType));
                 masterPage.listView.SelectedItem = null;
                 IsPresented = false;
             }

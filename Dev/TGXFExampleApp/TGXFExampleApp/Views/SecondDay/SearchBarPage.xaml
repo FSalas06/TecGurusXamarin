@@ -11,6 +11,7 @@
                 Text="{Binding SearchBarText}" />
             <StackLayout>
                 <ListView
+                    HasUnevenRows="True"
                     ItemsSource="{Binding SupermarketListItems}"
                     SeparatorVisibility="None">
                     <ListView.ItemTemplate>
@@ -20,6 +21,7 @@
                                     Padding="10"
                                     HorizontalOptions="FillAndExpand"
                                     Orientation="Horizontal">
+                                    
                                     <Label
                                         Text="{Binding Name}"
                                         VerticalTextAlignment="Center" />

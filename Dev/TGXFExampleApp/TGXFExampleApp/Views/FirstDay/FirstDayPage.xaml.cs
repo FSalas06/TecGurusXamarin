@@ -10,7 +10,6 @@ namespace TGXFExampleApp.Views.FirstDay
 		public FirstDayPage ()
 		{
 			InitializeComponent ();
-            NavigationPage.SetHasNavigationBar(this, false);
             BindingContext = _viewModel = new FirstDayViewModel();
 		}
 

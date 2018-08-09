@@ -12,7 +12,6 @@ namespace TGXFExampleApp.Views.FirstDay
         public PickerPage()
         {
             InitializeComponent();
-
             NavigationPage.SetHasNavigationBar(this, false);
             BindingContext = _viewModel = new PickerViewModel();
         }

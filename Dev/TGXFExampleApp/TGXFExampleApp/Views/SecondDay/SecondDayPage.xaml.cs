@@ -17,7 +17,6 @@ namespace TGXFExampleApp.Views.SecondDay
         public SecondDayPage ()
 		{
 			InitializeComponent ();
-            NavigationPage.SetHasNavigationBar(this, false);
             BindingContext = _viewModel = new SecondDayViewModel();
         }
 
