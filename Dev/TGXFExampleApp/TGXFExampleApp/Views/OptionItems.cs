@@ -1,16 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using TGXFExampleApp.Models;
 using TGXFExampleApp.Views.FirstDay;
+using System.Linq;
+using TGXFExampleApp.Views.SecondDay;
 
 namespace TGXFExampleApp.Views
 {
     public static class OptionItems
     {
-        public static ObservableCollection<OptionsItemMenu> OptionMenuItems()
+        public static ObservableCollection<OptionsItemMenu> OptionMenuItems(int day)
         {
-            ObservableCollection<OptionsItemMenu> Option = new ObservableCollection<OptionsItemMenu>
+            var Opt = new List<OptionsItemMenu>
             {
                 new OptionsItemMenu
                 {
@@ -35,18 +36,37 @@ namespace TGXFExampleApp.Views
 
                 new OptionsItemMenu
                 {
-                    TitleOption = "label",
-                    TargetType = typeof(BoxViewPage),
+                    TitleOption = "Activity Indicator",
+                    TargetType = typeof(ActivityIndicatorPagexaml),
                     Group = 1
                 },
 
                 new OptionsItemMenu
                 {
-                    TitleOption = "label",
-                    TargetType = typeof(BoxViewPage),
+                    TitleOption = "Progress Bar",
+                    TargetType = typeof(ProgressBarPage),
                     Group = 1
-                }
+                },
+
+                new OptionsItemMenu
+                {
+                    TitleOption = "SearchBar",
+                    TargetType = typeof(SearchBarPage),
+                    Group = 1
+                },
+
+                new OptionsItemMenu
+                {
+                    TitleOption = "Stepper",
+                    TargetType = typeof(StepperPage),
+                    Group = 1
+                },
+
             };
+
+            ObservableCollection<OptionsItemMenu> Option = 
+                new ObservableCollection<OptionsItemMenu>(Opt.Where(o => o.Group == day));
+            
             return Option;
         }
 
@@ -61,6 +81,35 @@ namespace TGXFExampleApp.Views
             };
 
             return PickerItem;
+        }
+
+        public static List<SupermarketItems> SuperMarketList()
+        {
+            var Items = new List<SupermarketItems>
+            {
+                new SupermarketItems
+                {
+                    Name = "Tomatoes",
+                    Price = 20.30,
+                    Group = "Vegetables"
+                },
+
+                new SupermarketItems
+                {
+                    Name = "Apple",
+                    Price = 20.30,
+                    Group = "Fruit"
+                },
+
+                new SupermarketItems
+                {
+                    Name = "Orange",
+                    Price = 20.30,
+                    Group = "Fruit"
+                },
+            };
+
+            return Items;
         }
     }
 }

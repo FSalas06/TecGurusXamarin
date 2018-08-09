@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.Linq;
 using System.Windows.Input;
 using TGXFExampleApp.Models;
 using TGXFExampleApp.ViewModels.Shared;
 using TGXFExampleApp.Views;
 using Xamarin.Forms;
 
-namespace TGXFExampleApp.ViewModels.FirstDay
+namespace TGXFExampleApp.ViewModels.SecondDay
 {
-    public class FirstDayViewModel : BaseViewModel
+    public class SecondDayViewModel : BaseViewModel
     {
         private ObservableCollection<OptionsItemMenu> _menuOptions;
         private OptionsItemMenu _singleOption;
@@ -28,7 +27,7 @@ namespace TGXFExampleApp.ViewModels.FirstDay
                 {
                     return;
                 }
-                if(SelectedOption.CanExecute(_singleOption))
+                if (SelectedOption.CanExecute(_singleOption))
                 {
                     SelectedOption.Execute(_singleOption);
                 }
@@ -50,7 +49,7 @@ namespace TGXFExampleApp.ViewModels.FirstDay
 
         public ICommand SelectedOption { get; set; }
 
-        public FirstDayViewModel()
+        public SecondDayViewModel()
         {
             MenuOptions = new ObservableCollection<OptionsItemMenu>();
             SelectedOption = new Command<OptionsItemMenu>(OptionSelected);
@@ -66,7 +65,7 @@ namespace TGXFExampleApp.ViewModels.FirstDay
         {
             try
             {
-                MenuOptions = OptionItems.OptionMenuItems(0);
+                MenuOptions = OptionItems.OptionMenuItems(1);
             }
             catch (Exception ex)
             {
@@ -86,5 +85,6 @@ namespace TGXFExampleApp.ViewModels.FirstDay
                 Debug.WriteLine("[OptionSelected] : " + ex.Message);
             }
         }
+
     }
 }
