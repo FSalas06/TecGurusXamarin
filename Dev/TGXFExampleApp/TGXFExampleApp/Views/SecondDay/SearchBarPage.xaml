@@ -21,7 +21,7 @@
                                     Padding="10"
                                     HorizontalOptions="FillAndExpand"
                                     Orientation="Horizontal">
-                                    
+
                                     <Label
                                         Text="{Binding Name}"
                                         VerticalTextAlignment="Center" />

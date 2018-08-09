@@ -1,4 +1,5 @@
-﻿using TGXFExampleApp.ViewModels.FirstDay;
+﻿using System.Threading.Tasks;
+using TGXFExampleApp.ViewModels.FirstDay;
 using Xamarin.Forms;
 
 namespace TGXFExampleApp.Views.FirstDay

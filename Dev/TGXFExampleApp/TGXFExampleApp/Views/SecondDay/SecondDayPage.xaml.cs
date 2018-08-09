@@ -23,7 +23,9 @@ namespace TGXFExampleApp.Views.SecondDay
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            IsBusy = true;
             _viewModel?.OnAppearing();
+            IsBusy = false;
         }
 
         void Handle_ItemSelected(object sender, SelectedItemChangedEventArgs e)
