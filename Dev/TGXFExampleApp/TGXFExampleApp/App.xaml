@@ -10,6 +10,7 @@
             <Color x:Key="Mystic">#CFD6D2</Color>
             <Color x:Key="OceanGreen">#52B77B</Color>
             <Color x:Key="BondiBlue">#0E93B5</Color>
+            <Color x:Key="Silver">#B7B7B7</Color>
             <!--  Global Styles  -->
             <!--  Pages  -->
             <Style TargetType="NavigationPage">
@@ -41,7 +42,7 @@
                 <Setter Property="BorderWidth" Value="1" />
                 <Setter Property="BorderColor" Value="Black" />
                 <Setter Property="TextColor" Value="White" />
-                <Setter Property="Image" Value="cog.png" />
+                <!--<Setter Property="Image" Value="cog.png" />-->
             </Style>
             <Style
                 x:Key="ButtonAccept"
@@ -64,6 +65,15 @@
                 <Setter Property="TextColor" Value="{StaticResource OceanGreen}" />
                 <Setter Property="Image" Value="error.png" />
                 <Setter Property="Text" Value="Cancel" />
+            </Style>
+            <Style
+                x:Key="ButtonCalc"
+                TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Silver}" />
+                <Setter Property="BorderRadius" Value="10" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="BorderColor" Value="Black" />
+                <Setter Property="TextColor" Value="White" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>

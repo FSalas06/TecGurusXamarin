@@ -10,6 +10,8 @@
   <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="ViewModels\FirstDay\" />
+    <Folder Include="Views\ExamplesApp\" />
+    <Folder Include="ViewModels\ExampleApp\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Views\FirstDay\FirstDayPage.xaml">

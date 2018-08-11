@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
     x:Class="TGXFExampleApp.Views.SecondDay.StepperPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
@@ -11,7 +11,7 @@
             <Stepper
                 Increment="1"
                 Maximum="10"
-                Minimum="2"
+                Minimum="1"
                 Value="{Binding StepperValue}" />
         </StackLayout>
     </ContentPage.Content>
