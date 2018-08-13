@@ -12,7 +12,7 @@ namespace AppEjemplo
 		{
 			InitializeComponent();
 
-            MainPage = new PageExample();
+            MainPage = new NavigationPage(new SingleButtonNavigation());
 		}
 
 		protected override void OnStart ()

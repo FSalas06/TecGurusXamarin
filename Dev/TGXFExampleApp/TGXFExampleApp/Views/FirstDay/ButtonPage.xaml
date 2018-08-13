@@ -7,10 +7,18 @@
         <StackLayout
             Padding="20"
             Spacing="30">
-            <Button Text="Alert" Command="{Binding AlertShowCommand}"/>
-            <Button Text="Options" Command="{Binding ActionSheetCommand}"/>
-            <Button Style="{StaticResource ButtonAccept}" Command="{Binding YesNoAlertCommand}"/>
-            <Button Style="{StaticResource ButtonCancel}" Command="{Binding YesNoAlertCommand}"/>
+            <Button
+                Command="{Binding AlertShowCommand}"
+                Text="Alert" />
+            <Button
+                Command="{Binding ActionSheetCommand}"
+                Text="Options" />
+            <Button
+                Command="{Binding YesNoAlertCommand}"
+                Style="{StaticResource ButtonAccept}" />
+            <Button
+                Command="{Binding YesNoAlertCommand}"
+                Style="{StaticResource ButtonCancel}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
