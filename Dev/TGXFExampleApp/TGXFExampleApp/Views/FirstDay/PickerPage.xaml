@@ -10,7 +10,9 @@
                 ItemsSource="{Binding PickerListItem}"
                 SelectedIndex="{Binding ItemPickerIndex}" />
 
-            <DatePicker Format="dd MM, yyyy" TextColor="Maroon"/>
+            <DatePicker
+                Format="dd MM, yyyy"
+                TextColor="Maroon" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

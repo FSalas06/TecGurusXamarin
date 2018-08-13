@@ -1,8 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppEjemplo.App">
-	<Application.Resources>
-    
-	</Application.Resources>
+<Application
+    x:Class="AppEjemplo.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Application.Resources>
+
+        <!--  Color palette  -->
+        <Color x:Key="Silver">#b7b7b7</Color>
+
+        <!--  Styles  -->
+
+        <Style
+            x:Key="ButtonCalculator"
+            TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{StaticResource Silver}" />
+            <Setter Property="BorderRadius" Value="10" />
+            <Setter Property="BorderWidth" Value="1" />
+            <Setter Property="BorderColor" Value="Black" />
+            <Setter Property="TextColor" Value="White" />
+
+        </Style>
+
+
+    </Application.Resources>
 </Application>

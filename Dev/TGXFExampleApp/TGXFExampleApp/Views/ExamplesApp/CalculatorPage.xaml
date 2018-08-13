@@ -6,11 +6,11 @@
     <ContentPage.Content>
         <Frame
             Margin="10"
-            HorizontalOptions="CenterAndExpand"
-            VerticalOptions="CenterAndExpand"
+            Padding="20"
             BackgroundColor="Black"
             HasShadow="true"
-            Padding="20">
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*" />
@@ -32,8 +32,8 @@
                     Grid.ColumnSpan="4"
                     BackgroundColor="White"
                     FlowDirection="LeftToRight"
-                    TextColor="Navy"
-                    Text="{Binding PanelCalc, Mode=TwoWay}" />
+                    Text="{Binding PanelCalc, Mode=TwoWay}"
+                    TextColor="Navy" />
 
                 <Button
                     x:Name="btn7"
