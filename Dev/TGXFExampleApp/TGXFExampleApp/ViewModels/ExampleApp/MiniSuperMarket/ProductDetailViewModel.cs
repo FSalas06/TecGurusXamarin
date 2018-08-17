@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Windows.Input;
+using TGXFExampleApp.LocalData;
 using TGXFExampleApp.Models;
 using TGXFExampleApp.ViewModels.Shared;
 using Xamarin.Forms;
@@ -23,18 +24,20 @@ namespace TGXFExampleApp.ViewModels.ExampleApp.MiniSuperMarket
         }
 
         public ICommand AddItemToList { get; private set; }
+        private ServicesDataBase<SupermarketItems> ServiceData;
 
         public ProductDetailViewModel(SupermarketItems item)
         {
             Item = item;
+            ServiceData = new ServicesDataBase<SupermarketItems>();
             AddItemToList = new Command(HandleAction);
         }
 
-        void HandleAction(object obj)
+        private async void HandleAction(object obj)
         {
             try
             {
-                App.DB.Add(Item);
+                await ServiceData.AddToTableAsync(Item);
             }
             catch(Exception ex)
             {

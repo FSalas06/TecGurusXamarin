@@ -47,16 +47,25 @@ namespace TGXFExampleApp.ViewModels.ExampleApp.MiniSuperMarket
         }
 
         public ICommand GoToProductDescription { get; private set; }
+        public ICommand GoCartCommand { get; private set; }
 
         public SuperMarketProductListViewModel()
         {
             SupermarketListItems = new ObservableCollection<SupermarketItems>(OptionItems.SuperMarketList());
             GoToProductDescription = new Command<SupermarketItems>(GoToDetail);
+            GoCartCommand = new Command(OnGoToCartShopping);
+        }
+
+        private async void OnGoToCartShopping(object obj)
+        {
+            await (Application.Current.MainPage as MasterDetailPage).Detail.Navigation.PushAsync(new NavigationPage(new ShoppingCartPage()));
         }
 
         private async void GoToDetail(SupermarketItems item)
         {
             await (Application.Current.MainPage as MasterDetailPage).Detail.Navigation.PushAsync(new NavigationPage(new ProductDetailPage(item)));
         }
+
+
     }
 }
