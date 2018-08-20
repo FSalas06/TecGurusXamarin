@@ -10,7 +10,6 @@
                 ItemSelected="Handle_ItemSelected"
                 ItemsSource="{Binding MenuOptions}"
                 SelectedItem="{Binding SingleOption}"
-                SelectionMode="Single"
                 SeparatorVisibility="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>

@@ -29,7 +29,7 @@ namespace TGXFExampleApp.ViewModels.ExampleApp.MiniSuperMarket
             ServiceData = new ServicesDataBase<SupermarketItems>();
         }
 
-        public async override void OnAppearing()
+        public override async void OnAppearing()
         {
             base.OnAppearing();
             ShoppingList = new ObservableCollection<SupermarketItems>(await ServiceData.GetTableAsync());
