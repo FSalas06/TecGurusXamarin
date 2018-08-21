@@ -13,19 +13,22 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem
+                                    Command="{Binding Path=BindingContext.OnDeleteCommand, Source={x:Reference Name=ItemsMarket}}"
+                                    CommandParameter="{Binding .}"
+                                    Text="Delete" />
+
+                            </ViewCell.ContextActions>
                             <StackLayout
                                 Padding="10"
                                 HorizontalOptions="FillAndExpand"
                                 Orientation="Horizontal">
-
                                 <Label
+                                    FontSize="Medium"
                                     Text="{Binding Name}"
                                     VerticalTextAlignment="Center" />
-                                <Image
-                                    HeightRequest="20"
-                                    HorizontalOptions="EndAndExpand"
-                                    Source="next.png"
-                                    WidthRequest="20" />
+
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
