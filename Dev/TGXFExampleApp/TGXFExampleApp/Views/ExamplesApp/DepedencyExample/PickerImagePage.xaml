@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="TGXFExampleApp.Views.ExamplesApp.DepedencyExample.PickerImagePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <Grid>
+            <Image x:Name="_imagePicker" HeightRequest="80" WidthRequest="80"/>
+            <Button
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                Clicked="Handle_Clicked"
+                Text="Picker Photo" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

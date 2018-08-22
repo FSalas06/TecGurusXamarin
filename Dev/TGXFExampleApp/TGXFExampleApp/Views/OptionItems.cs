@@ -4,6 +4,7 @@ using TGXFExampleApp.Models;
 using TGXFExampleApp.Views.FirstDay;
 using System.Linq;
 using TGXFExampleApp.Views.SecondDay;
+using TGXFExampleApp.Views.ExamplesApp.DepedencyExample;
 
 namespace TGXFExampleApp.Views
 {
@@ -60,6 +61,13 @@ namespace TGXFExampleApp.Views
                     TitleOption = "Stepper",
                     TargetType = typeof(StepperPage),
                     Group = 1
+                },
+
+                new OptionsItemMenu
+                {
+                    TitleOption = "Picker Image",
+                    TargetType = typeof(PickerImagePage),
+                    Group = 2
                 },
 
             };

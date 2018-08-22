@@ -12,6 +12,8 @@
     <Folder Include="Interfaces\" />
     <Folder Include="LocalData\" />
     <Folder Include="ViewModels\ExampleApp\MiniSuperMarket\" />
+    <Folder Include="Views\ExamplesApp\DepedencyExample\" />
+    <Folder Include="ViewModels\ExampleApp\DependencyExample\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Views\FirstDay\FirstDayPage.xaml">
