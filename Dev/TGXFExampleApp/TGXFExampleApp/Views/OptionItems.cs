@@ -4,6 +4,7 @@ using TGXFExampleApp.Models;
 using TGXFExampleApp.Views.FirstDay;
 using System.Linq;
 using TGXFExampleApp.Views.SecondDay;
+using TGXFExampleApp.Views.ExamplesApp.DepedencyExample;
 
 namespace TGXFExampleApp.Views
 {
@@ -62,6 +63,13 @@ namespace TGXFExampleApp.Views
                     Group = 1
                 },
 
+                new OptionsItemMenu
+                {
+                    TitleOption = "Picker Image",
+                    TargetType = typeof(PickerImagePage),
+                    Group = 2
+                },
+
             };
 
             ObservableCollection<OptionsItemMenu> Option = 
@@ -70,6 +78,10 @@ namespace TGXFExampleApp.Views
             return Option;
         }
 
+        /// <summary>
+        /// Picker Items
+        /// </summary>
+        /// <returns></returns>
         public static Dictionary<string, int> OptionPickerItem()
         {
             Dictionary<string, int> PickerItem = new Dictionary<string, int>
@@ -83,28 +95,32 @@ namespace TGXFExampleApp.Views
             return PickerItem;
         }
 
+        /// <summary>
+        /// Supermarket List
+        /// </summary>
+        /// <returns></returns>
         public static List<SupermarketItems> SuperMarketList()
         {
             var Items = new List<SupermarketItems>
             {
                 new SupermarketItems
                 {
-                    Name = "Tomatoes",
-                    Price = 20.30,
+                    Name = "Tomato",
+                    Price = 10.30,
                     Group = "Vegetables"
                 },
 
                 new SupermarketItems
                 {
                     Name = "Apple",
-                    Price = 20.30,
+                    Price = 05.30,
                     Group = "Fruit"
                 },
 
                 new SupermarketItems
                 {
                     Name = "Orange",
-                    Price = 20.30,
+                    Price = 1.30,
                     Group = "Fruit"
                 },
             };

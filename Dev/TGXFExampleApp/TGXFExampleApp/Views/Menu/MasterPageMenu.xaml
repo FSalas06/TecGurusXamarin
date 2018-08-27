@@ -14,10 +14,16 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <StackLayout Grid.Row="0" Grid.Column="0">
-                <Image Aspect="AspectFill" Source="menuMaster.png" />
+            <StackLayout
+                Grid.Row="0"
+                Grid.Column="0">
+                <Image
+                    Aspect="AspectFill"
+                    Source="menuMaster.png" />
             </StackLayout>
-            <StackLayout Grid.Row="1" Grid.Column="0">
+            <StackLayout
+                Grid.Row="1"
+                Grid.Column="0">
                 <ListView
                     x:Name="listView"
                     x:FieldModifier="public"
@@ -27,19 +33,21 @@
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout
+                                    Padding="10"
                                     HorizontalOptions="FillAndExpand"
-                                    Orientation="Horizontal"
-                                    Padding="10">
+                                    Orientation="Horizontal">
                                     <Image
-                                        WidthRequest="30"
                                         HeightRequest="30"
-                                        Source="{Binding IconSource}" />
-                                    <Label Text="{Binding TitleOption}" VerticalTextAlignment="Center" />
+                                        Source="{Binding IconSource}"
+                                        WidthRequest="30" />
+                                    <Label
+                                        Text="{Binding TitleOption}"
+                                        VerticalTextAlignment="Center" />
                                     <Image
-                                        WidthRequest="20"
                                         HeightRequest="20"
                                         HorizontalOptions="EndAndExpand"
-                                        Source="next.png" />
+                                        Source="next.png"
+                                        WidthRequest="20" />
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>

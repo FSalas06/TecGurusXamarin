@@ -1,8 +1,8 @@
-﻿using System;
-namespace TGXFExampleApp
+﻿namespace TGXFExampleApp
 {
     public static class Constants
     {
-        public const string NameApp = "App";
+        public const string NameApp = "Tec Guru App Example";
+        public const string NameDataBase = "SM.db";
     }
 }
