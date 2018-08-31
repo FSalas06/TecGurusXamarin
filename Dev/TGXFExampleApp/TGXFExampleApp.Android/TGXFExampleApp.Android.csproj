@@ -77,6 +77,12 @@
     <PackageReference Include="Xamarin.Forms">
       <Version>3.1.0.697729</Version>
     </PackageReference>
+    <PackageReference Include="Xam.Plugin.Media">
+      <Version>4.0.1.5</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms.CarouselView">
+      <Version>2.3.0-pre2</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -119,12 +125,14 @@
     <AndroidResource Include="Resources\drawable\error.png" />
     <AndroidResource Include="Resources\drawable\cog.png" />
     <AndroidResource Include="Resources\drawable\shoppingcart.png" />
+    <AndroidResource Include="Resources\xml\file_paths.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\drawable-xxxhdpi\" />
+    <Folder Include="Resources\xml\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TGXFExampleApp\TGXFExampleApp.csproj">

@@ -2,7 +2,10 @@
 using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
+using Android.Runtime;
+using Plugin.CurrentActivity;
 
 namespace TGXFExampleApp.Droid
 {
@@ -24,6 +27,9 @@ namespace TGXFExampleApp.Droid
 
             base.OnCreate(bundle);
             Instance = this;
+
+            CrossCurrentActivity.Current.Init(this, bundle);
+
             Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }
@@ -47,6 +53,12 @@ namespace TGXFExampleApp.Droid
                     PickImageTaskCompletionSource.SetResult(null);
                 }
             }
+        }
+
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
+        {
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            Plugin.Permissions.PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
 }

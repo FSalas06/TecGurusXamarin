@@ -70,6 +70,13 @@ namespace TGXFExampleApp.Views
                     Group = 2
                 },
 
+                new OptionsItemMenu
+                {
+                    TitleOption = "Package use",
+                    TargetType = typeof(PackagesUsePage),
+                    Group = 2
+                },
+
             };
 
             ObservableCollection<OptionsItemMenu> Option = 

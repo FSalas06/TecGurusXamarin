@@ -2,6 +2,46 @@
 <ContentPage
     x:Class="TGXFExampleApp.Views.Menu.MasterDetailMenu"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <ContentPage.Content />
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+
+            <cv:CarouselView
+                x:Name="CarouselZoos"
+                Grid.Row="0"
+                HeightRequest="200"
+                ItemsSource="{Binding Zoos}">
+                <cv:CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Image
+                                Grid.RowSpan="2"
+                                Aspect="AspectFill"
+                                Source="{Binding ImageUrl}" />
+                            <StackLayout
+                                Grid.Row="1"
+                                BackgroundColor="#80000000"
+                                Padding="12">
+                                <Label
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="CenterAndExpand"
+                                    FontSize="16"
+                                    Text="{Binding Name}"
+                                    TextColor="White" />
+                            </StackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </cv:CarouselView.ItemTemplate>
+            </cv:CarouselView>
+        </Grid>
+    </ContentPage.Content>
 </ContentPage>

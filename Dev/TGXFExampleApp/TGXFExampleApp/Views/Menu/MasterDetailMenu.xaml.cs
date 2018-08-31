@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using TGXFExampleApp.ViewModels.Menu;
+using Xamarin.Forms;
 
 namespace TGXFExampleApp.Views.Menu
 {
@@ -6,7 +7,8 @@ namespace TGXFExampleApp.Views.Menu
     {        
         public MasterDetailMenu()
         {
-            InitializeComponent();           
+            InitializeComponent();
+            BindingContext = new MonkeysViewModel();
         }
     }
 }
