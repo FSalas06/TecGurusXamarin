@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="TGXFExampleApp.Views.ExamplesApp.RestServices.AmiiboPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout>
+                <ListView ItemsSource="{Binding Characters}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Detail="{Binding key}" Text="{Binding name}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <Grid
+                BackgroundColor="Black"
+                IsVisible="{Binding IsBusy}"
+                Opacity=".8">
+                <ActivityIndicator HorizontalOptions="Center" IsRunning="{Binding IsBusy}" />
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

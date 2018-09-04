@@ -126,6 +126,9 @@
     <AndroidResource Include="Resources\drawable\cog.png" />
     <AndroidResource Include="Resources\drawable\shoppingcart.png" />
     <AndroidResource Include="Resources\xml\file_paths.xml" />
+    <AndroidResource Include="Resources\drawable\binary.png" />
+    <AndroidResource Include="Resources\drawable\code.png" />
+    <AndroidResource Include="Resources\drawable\devxam.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />

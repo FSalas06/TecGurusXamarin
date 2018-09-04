@@ -8,7 +8,7 @@ namespace TGXFExampleApp.Views.Menu
         public MasterDetailMenu()
         {
             InitializeComponent();
-            BindingContext = new MonkeysViewModel();
+            BindingContext = new MasterDetailMenuViewModel();
         }
     }
 }

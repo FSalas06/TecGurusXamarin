@@ -16,6 +16,9 @@
     <Folder Include="ViewModels\ExampleApp\DependencyExample\" />
     <Folder Include="ViewModels\Menu\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Services\Shared\" />
+    <Folder Include="ViewModels\ExampleApp\RestServices\" />
+    <Folder Include="Views\ExamplesApp\RestServices\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Views\FirstDay\FirstDayPage.xaml">
@@ -39,6 +42,7 @@
     <Compile Remove="ViewModels\FirstDay\BoxViewPage.xaml.cs" />
     <Compile Remove="Views\FirstDay\PickerPage.cs" />
     <Compile Remove="Interfaces\IEntityFrameworkService.cs" />
+    <Compile Remove="Helpers\Grouping.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.1" />

@@ -8,6 +8,20 @@ namespace TGXFExampleApp.ViewModels.Shared
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
+        private bool _isBusy;
+
+        public bool IsBusy
+        {
+            get
+            {
+                return _isBusy;
+            }
+            set
+            {
+                SetObservableProperty(ref _isBusy, value);
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         public virtual async void OnAppearing()

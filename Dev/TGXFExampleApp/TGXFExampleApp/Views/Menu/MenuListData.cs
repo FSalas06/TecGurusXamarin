@@ -3,6 +3,7 @@ using TGXFExampleApp.Models;
 using TGXFExampleApp.Views.ExamplesApp;
 using TGXFExampleApp.Views.ExamplesApp.DepedencyExample;
 using TGXFExampleApp.Views.ExamplesApp.MiniSuperMarket;
+using TGXFExampleApp.Views.ExamplesApp.RestServices;
 using TGXFExampleApp.Views.FirstDay;
 using TGXFExampleApp.Views.SecondDay;
 
@@ -45,6 +46,13 @@ namespace TGXFExampleApp.Views.Menu
                 TitleOption = "Practice 3",
                 IconSource = "devday.png",
                 TargetType = typeof(DependencyPage)
+            });
+
+            this.Add(new MenuItemMaster
+            {
+                TitleOption = "Practice 4",
+                IconSource = "devday.png",
+                TargetType = typeof(AmiiboPage)
             });
         }
     }
