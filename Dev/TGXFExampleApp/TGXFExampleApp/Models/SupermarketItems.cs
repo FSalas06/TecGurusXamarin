@@ -1,10 +1,10 @@
-﻿//using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace TGXFExampleApp.Models
 {
     public class SupermarketItems
     {
-       // [Key]
+        [Key]
         public int Id { get; set; }
         public string ImageProduct
         {

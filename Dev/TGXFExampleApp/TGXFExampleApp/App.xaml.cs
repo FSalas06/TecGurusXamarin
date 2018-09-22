@@ -13,6 +13,10 @@ namespace TGXFExampleApp
 
         public App()
         {
+            #if DEBUG
+            LiveReload.Init();
+            #endif
+
             InitializeComponent();
             MainPage = new MasterDetailPageMenu();
             Navigation = (Current.MainPage as MasterDetailPage).Detail.Navigation;

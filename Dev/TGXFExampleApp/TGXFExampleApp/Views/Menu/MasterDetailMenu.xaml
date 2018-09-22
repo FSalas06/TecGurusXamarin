@@ -29,14 +29,14 @@
                                 Source="{Binding ImageUrl}" />
                             <StackLayout
                                 Grid.Row="1"
-                                BackgroundColor="#80000000"
-                                Padding="12">
+                                Padding="12"
+                                BackgroundColor="#80000000">
                                 <Label
-                                    HorizontalOptions="Center"
-                                    VerticalOptions="CenterAndExpand"
                                     FontSize="16"
+                                    HorizontalOptions="Center"
                                     Text="{Binding Name}"
-                                    TextColor="White" />
+                                    TextColor="White"
+                                    VerticalOptions="CenterAndExpand" />
                             </StackLayout>
                         </Grid>
                     </DataTemplate>

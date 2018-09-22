@@ -6,7 +6,9 @@ using Android.Util;
 
 namespace TGXFExampleApp.Droid
 {
-    [Activity(Theme = "@style/MyTheme.Splash", NoHistory = true, MainLauncher = true)]
+    [Activity(Theme = "@style/MyTheme.Splash", 
+        NoHistory = true, 
+        MainLauncher = true)]
 	public class SplashActivity : AppCompatActivity
     {
         static readonly string TAG = "X:" + typeof(SplashActivity).Name;
@@ -21,7 +23,8 @@ namespace TGXFExampleApp.Droid
         protected override void OnResume()
         {
             base.OnResume();
-            StartActivity(new Intent(Application.Context, typeof(MainActivity)));
+            StartActivity(new Intent(Application.Context, 
+                typeof(MainActivity)));
         }
 
         // Prevent the back button from canceling the startup process

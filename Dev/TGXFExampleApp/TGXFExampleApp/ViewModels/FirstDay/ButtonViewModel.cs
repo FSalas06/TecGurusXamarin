@@ -38,7 +38,7 @@ namespace TGXFExampleApp.ViewModels.FirstDay
 
         private void ShowAlertAction(object obj)
         {
-            DisplayAlert(message: "Hello it is a Alert!");
+            DisplayAlert(message: "Hello it is an Alert!");
         }
     }
 }

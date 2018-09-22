@@ -8,6 +8,7 @@
             Padding="20"
             Spacing="30">
             <Button
+                Clicked="Button_Clicked"
                 Command="{Binding AlertShowCommand}"
                 Text="Alert" />
             <Button

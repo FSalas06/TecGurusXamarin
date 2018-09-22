@@ -46,7 +46,7 @@ namespace TGXFExampleApp.ViewModels.ExampleApp.RestServices
                 //var characters = await service.GetDataAsync(url);
                 //Characters = new ObservableCollection<Character>(characters.amiibo);
                 IsBusy = true;
-                await Task.Delay(5000);
+                //await Task.Delay(5000);
                 var character = await _service.GetAllAmiibosList();
                 Characters = new ObservableCollection<Character>(character.amiibo);
                 IsBusy = false;

@@ -28,7 +28,9 @@ namespace TGXFExampleApp.ViewModels.SecondDay
             }
             set
             {
-                SetObservableProperty(ref _visibleActInd, value);
+                //SetObservableProperty(ref _visibleActInd, value);
+                _visibleActInd = value;
+                OnPropertyChanged();
             }
         }
 
