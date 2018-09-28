@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="TGXFExampleApp.Views.ExamplesApp.CalculatorPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <Frame
+            Margin="10"
+            Padding="20"
+            BackgroundColor="Black"
+            HasShadow="true"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+
+                <Entry
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="4"
+                    BackgroundColor="White"
+                    FlowDirection="LeftToRight"
+                    Text="{Binding PanelCalc, Mode=TwoWay}"
+                    TextColor="Navy" />
+
+                <Button
+                    x:Name="btn7"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Command="{Binding PressButtonCalc}"
+                    CommandParameter="{Binding Source={x:Reference btn7}, Path=Text}}"
+                    Style="{StaticResource ButtonCalc}"
+                    Text="7" />
+                <Button
+                    x:Name="btn8"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Command="{Binding PressButtonCalc}"
+                    CommandParameter="{Binding Source={x:Reference btn8}, Path=Text}}"
+                    Style="{StaticResource ButtonCalc}"
+                    Text="8" />
+                <Button
+                    x:Name="btn9"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Command="{Binding PressButtonCalc}"
+                    CommandParameter="{Binding Source={x:Reference btn9}, Path=Text}}"
+                    Style="{StaticResource ButtonCalc}"
+                    Text="9" />
+                <Button
+                    x:Name="btnps"
+                    Grid.Row="1"
+                    Grid.Column="3"
+                    Command="{Binding PressButtonCalcPL}"
+                    Style="{StaticResource ButtonCalc}"
+                    Text="+" />
+
+                <Button
+                    x:Name="btn4"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Command="{Binding PressButtonCalc}"
+                    CommandParameter="{Binding Source={x:Reference btn4}, Path=Text}}"
+                    Style="{StaticResource ButtonCalc}"
+                    Text="4" />
+                <Button
+                    x:Name="btn5"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Command="{Binding PressButtonCalc}"
+                    CommandParameter="{Binding Source={x:Reference btn5}, Path=Text}}"
+                    Style="{StaticResource ButtonCalc}"
+                    Text="5" />
+                <Button
+                    x:Name="btn6"
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    Command="{Binding PressButtonCalc}"
+                    CommandParameter="{Binding Source={x:Reference btn6}, Path=Text}}"
+                    Style="{StaticResource ButtonCalc}"
+                    Text="6" />
+                <Button
+                    x:Name="btnls"
+                    Grid.Row="2"
+                    Grid.Column="3"
+                    Command="{Binding PressButtonCalcLS}"
+                    Style="{StaticResource ButtonCalc}"
+                    Text="-" />
+
+                <Button
+                    x:Name="btn1"
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Command="{Binding PressButtonCalc}"
+                    CommandParameter="{Binding Source={x:Reference btn1}, Path=Text}}"
+                    Style="{StaticResource ButtonCalc}"
+                    Text="1" />
+                <Button
+                    x:Name="btn2"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Command="{Binding PressButtonCalc}"
+                    CommandParameter="{Binding Source={x:Reference btn2}, Path=Text}}"
+                    Style="{StaticResource ButtonCalc}"
+                    Text="2" />
+                <Button
+                    x:Name="btn3"
+                    Grid.Row="3"
+                    Grid.Column="2"
+                    Command="{Binding PressButtonCalc}"
+                    CommandParameter="{Binding Source={x:Reference btn3}, Path=Text}}"
+                    Style="{StaticResource ButtonCalc}"
+                    Text="3" />
+                <Button
+                    x:Name="btneq"
+                    Grid.Row="3"
+                    Grid.RowSpan="2"
+                    Grid.Column="3"
+                    Command="{Binding PressButtonCalcEQ}"
+                    Style="{StaticResource ButtonCalc}"
+                    Text="=" />
+
+                <Button
+                    x:Name="btn0"
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Command="{Binding PressButtonCalc}"
+                    CommandParameter="{Binding Source={x:Reference btn0}, Path=Text}}"
+                    Style="{StaticResource ButtonCalc}"
+                    Text="0" />
+                <Button
+                    x:Name="btnpt"
+                    Grid.Row="4"
+                    Grid.Column="2"
+                    Command="{Binding PressButtonCalc}"
+                    CommandParameter="{Binding Source={x:Reference btnpt}, Path=Text}}"
+                    Style="{StaticResource ButtonCalc}"
+                    Text="." />
+
+            </Grid>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

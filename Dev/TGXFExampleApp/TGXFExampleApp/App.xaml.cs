@@ -1,4 +1,5 @@
-﻿using TGXFExampleApp.Views.Menu;
+﻿using TGXFExampleApp.LocalData;
+using TGXFExampleApp.Views.Menu;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -8,12 +9,29 @@ namespace TGXFExampleApp
     public partial class App : Application
     {
         public static INavigation Navigation { get; set; }
+        private static DataBaseContext _db;
 
         public App()
         {
+            #if DEBUG
+            LiveReload.Init();
+            #endif
+
             InitializeComponent();
             MainPage = new MasterDetailPageMenu();
-            Navigation = (MainPage as MasterDetailPage).Detail.Navigation;
+            Navigation = (Current.MainPage as MasterDetailPage).Detail.Navigation;
+        }
+
+        public static DataBaseContext DB
+        {
+            get
+            {
+                if (_db == null)
+                {
+                    _db = new DataBaseContext(Constants.NameDataBase);
+                }
+                return _db;
+            }
         }
 
         protected override void OnStart()

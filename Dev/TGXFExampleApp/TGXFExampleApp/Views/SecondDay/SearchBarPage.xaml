@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="TGXFExampleApp.Views.SecondDay.SearchBarPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar
+                CancelButtonColor="Red"
+                Placeholder="Custom Search"
+                Text="{Binding SearchBarText}" />
+            <StackLayout>
+                <ListView
+                    HasUnevenRows="True"
+                    ItemsSource="{Binding SupermarketListItems}"
+                    SeparatorVisibility="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout
+                                    Padding="10"
+                                    HorizontalOptions="FillAndExpand"
+                                    Orientation="Horizontal">
+
+                                    <Label
+                                        Text="{Binding Name}"
+                                        VerticalTextAlignment="Center" />
+                                    <Image
+                                        HeightRequest="20"
+                                        HorizontalOptions="EndAndExpand"
+                                        Source="next.png"
+                                        WidthRequest="20" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

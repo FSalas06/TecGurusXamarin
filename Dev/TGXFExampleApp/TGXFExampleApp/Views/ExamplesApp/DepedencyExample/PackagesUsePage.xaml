@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="TGXFExampleApp.Views.ExamplesApp.DepedencyExample.PackagesUsePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+
+            <Image
+                x:Name="image"
+                Grid.Row="0"
+                Grid.Column="0" />
+
+            <StackLayout
+                Grid.Row="1"
+                Grid.Column="0"
+                Padding="10"
+                Spacing="10">
+                <Button Text="Take Photo" Command="{Binding PhotoCommand}"/>
+                <Button Text="Pick Photo" Command="{Binding SelectCommand}"/>
+                <Button Text="Take Video" Command="{Binding VideoCommand}"/>
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -11,6 +11,8 @@ namespace TGXFExampleApp.Views.FirstDay
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+
+            
         }
     }
 }

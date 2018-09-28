@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppEjemplo.SingleButtonNavigation"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Single Button">
+    <ContentPage.Content>
+        <StackLayout
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand">
+            <Label FontAttributes="None" />
+            <Button
+                Clicked="Button_Clicked"
+                Text="Navigation button" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

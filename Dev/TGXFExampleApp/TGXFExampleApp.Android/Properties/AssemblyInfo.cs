@@ -9,7 +9,7 @@ using Android.App;
 [assembly: AssemblyTitle("TGXFExampleApp.Android")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Tec Gurus")]
 [assembly: AssemblyProduct("TGXFExampleApp.Android")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
@@ -32,3 +32,9 @@ using Android.App;
 // Add some common permissions, these can be removed if not needed
 [assembly: UsesPermission(Android.Manifest.Permission.Internet)]
 [assembly: UsesPermission(Android.Manifest.Permission.WriteExternalStorage)]
+
+#if DEBUG
+[assembly: Application(Debuggable = true)]
+#else
+[assembly: Application(Debuggable=false)]
+#endif

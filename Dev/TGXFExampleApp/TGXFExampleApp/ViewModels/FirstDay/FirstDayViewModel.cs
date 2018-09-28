@@ -15,7 +15,6 @@ namespace TGXFExampleApp.ViewModels.FirstDay
         private ObservableCollection<OptionsItemMenu> _menuOptions;
         private OptionsItemMenu _singleOption;
 
-
         public OptionsItemMenu SingleOption
         {
             get
@@ -67,7 +66,7 @@ namespace TGXFExampleApp.ViewModels.FirstDay
         {
             try
             {
-                MenuOptions = OptionItems.OptionMenuItems();
+                MenuOptions = OptionItems.OptionMenuItems(0);
             }
             catch (Exception ex)
             {

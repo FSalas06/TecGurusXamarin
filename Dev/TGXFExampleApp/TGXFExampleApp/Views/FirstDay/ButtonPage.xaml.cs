@@ -13,5 +13,10 @@ namespace TGXFExampleApp.Views.FirstDay
             NavigationPage.SetHasNavigationBar(this, false);
             BindingContext = _viewModel = new ButtonViewModel();
         }
+
+        private void Button_Clicked(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

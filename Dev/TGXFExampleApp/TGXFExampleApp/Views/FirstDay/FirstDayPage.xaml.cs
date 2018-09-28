@@ -1,4 +1,5 @@
-﻿using TGXFExampleApp.ViewModels.FirstDay;
+﻿using System.Threading.Tasks;
+using TGXFExampleApp.ViewModels.FirstDay;
 using Xamarin.Forms;
 
 namespace TGXFExampleApp.Views.FirstDay
@@ -10,7 +11,6 @@ namespace TGXFExampleApp.Views.FirstDay
 		public FirstDayPage ()
 		{
 			InitializeComponent ();
-            NavigationPage.SetHasNavigationBar(this, false);
             BindingContext = _viewModel = new FirstDayViewModel();
 		}
 
