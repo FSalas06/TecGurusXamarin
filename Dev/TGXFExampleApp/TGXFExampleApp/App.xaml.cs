@@ -13,9 +13,9 @@ namespace TGXFExampleApp
 
         public App()
         {
-            #if DEBUG
-            LiveReload.Init();
-            #endif
+            //#if DEBUG
+            //LiveReload.Init();
+            //#endif
 
             InitializeComponent();
             MainPage = new MasterDetailPageMenu();

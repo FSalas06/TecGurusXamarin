@@ -28,6 +28,7 @@ namespace TGXFExampleApp.Droid
             base.OnCreate(bundle);
             Instance = this;
 
+            ZXing.Net.Mobile.Forms.Android.Platform.Init();
             CrossCurrentActivity.Current.Init(this, bundle);
 
             Xamarin.Forms.Forms.Init(this, bundle);
@@ -59,6 +60,7 @@ namespace TGXFExampleApp.Droid
         {
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             Plugin.Permissions.PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            ZXing.Net.Mobile.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
 }

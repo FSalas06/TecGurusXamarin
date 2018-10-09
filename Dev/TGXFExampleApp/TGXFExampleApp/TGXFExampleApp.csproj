@@ -19,6 +19,8 @@
     <Folder Include="Services\Shared\" />
     <Folder Include="ViewModels\ExampleApp\RestServices\" />
     <Folder Include="Views\ExamplesApp\RestServices\" />
+    <Folder Include="Views\ExamplesApp\BarcodeScanner\" />
+    <Folder Include="ViewModels\ExampleApp\BarcodeScanner\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Views\FirstDay\FirstDayPage.xaml">
@@ -45,12 +47,12 @@
     <Compile Remove="Helpers\Grouping.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.4" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-    <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
+    <PackageReference Include="Xamarin.Forms" Version="3.2.0.871581" />
     <PackageReference Include="Xam.Plugin.Media" Version="4.0.1.5" />
-    <PackageReference Include="Xamarin.Forms.CarouselView" Version="2.3.0-pre2" />
-    <PackageReference Include="Xamarin.LiveReload" Version="0.3.27" />
+    <PackageReference Include="ZXing.Net.Mobile" Version="2.4.1" />
+    <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Views\ExamplesApp\DepedencyExample\CarouselExamplePage.xaml.cs">

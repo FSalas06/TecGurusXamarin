@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using TGXFExampleApp.Models;
 using TGXFExampleApp.Views.ExamplesApp;
+using TGXFExampleApp.Views.ExamplesApp.BarcodeScanner;
 using TGXFExampleApp.Views.ExamplesApp.DepedencyExample;
 using TGXFExampleApp.Views.ExamplesApp.MiniSuperMarket;
 using TGXFExampleApp.Views.ExamplesApp.RestServices;
@@ -15,14 +16,14 @@ namespace TGXFExampleApp.Views.Menu
         {
             this.Add(new MenuItemMaster
             {
-                TitleOption = "Day 1",
+                TitleOption = "User Interface 1",
                 IconSource = "devday.png",
                 TargetType = typeof(FirstDayPage)
             });
 
             this.Add(new MenuItemMaster
             {
-                TitleOption = "Day 2",
+                TitleOption = "User Interface 2",
                 IconSource = "devday.png",
                 TargetType = typeof(SecondDayPage)
             });
@@ -36,23 +37,30 @@ namespace TGXFExampleApp.Views.Menu
 
             this.Add(new MenuItemMaster
             {
-                TitleOption = "Practice 2",
+                TitleOption = "Example 1 - Local Database (SQLite)",
                 IconSource = "devday.png",
                 TargetType = typeof(SuperMarketProductListPage)
             });
 
             this.Add(new MenuItemMaster
             {
-                TitleOption = "Practice 3",
+                TitleOption = "Example 2 - Dependency and package",
                 IconSource = "devday.png",
                 TargetType = typeof(DependencyPage)
             });
 
             this.Add(new MenuItemMaster
             {
-                TitleOption = "Practice 4",
+                TitleOption = "Example 3 - Rest API",
                 IconSource = "devday.png",
                 TargetType = typeof(AmiiboPage)
+            });
+
+            this.Add(new MenuItemMaster
+            {
+                TitleOption = "Example 4 - BarCode Scanner",
+                IconSource = "devday.png",
+                TargetType = typeof(BarcodePage)
             });
         }
     }

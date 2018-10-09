@@ -25,6 +25,7 @@ namespace TGXFExampleApp.iOS
             Xamarin.Forms.Forms.Init();
 
             SQLitePCL.Batteries_V2.Init();
+            ZXing.Net.Mobile.Forms.iOS.Platform.Init();
 
             LoadApplication(new App());
             return base.FinishedLaunching(app, options);
