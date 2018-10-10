@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="TGXFExampleApp.Views.FirstDay.EntryPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="20" Padding="20">
+                <StackLayout Spacing="10">
+                    <Label Text="With Max Lengh" FontSize="Medium"/>
+                    <Entry MaxLength="10"/>
+                    <BoxView
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand"
+                        Color="Gray" />
+                </StackLayout>
+                
+                <StackLayout Spacing="10">
+                    <Label Text="With Cursor Position" FontSize="Medium"/>
+                    <Entry Text="Hello i am an Entry" CursorPosition="6"/>
+                    <BoxView
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand"
+                        Color="Gray" />
+                </StackLayout>
+                
+                <StackLayout Spacing="10">
+                    <Label Text="With Cursor Position and SelectionLength" FontSize="Medium"/>
+                    <Entry Text="Hello i am an Entry" CursorPosition="3" SelectionLength="4"/>
+                    <BoxView
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand"
+                        Color="Gray" />
+                </StackLayout>
+                
+                <StackLayout Spacing="10">
+                    <Label Text="Customize Keyboard" FontSize="Medium"/>
+                    <Entry Placeholder="Chat" Keyboard="Chat"/>
+                    <Entry Placeholder="Email" Keyboard="Email"/>
+                    <Entry Placeholder="Numeric" Keyboard="Numeric"/>
+                    <Entry Placeholder="Telephone" Keyboard="Telephone"/>
+                    <Entry Placeholder="Text" Keyboard="Text"/>
+                    <Entry Placeholder="URL" Keyboard="Url"/>
+                    <BoxView
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand"
+                        Color="Gray" />
+                </StackLayout>
+                
+                <StackLayout Spacing="10">
+                    <Label Text="Custom Return" FontSize="Medium"/>
+                    <Entry ReturnType="Done"/>
+                    <Entry ReturnType="Go"/>
+                    <Entry ReturnType="Next"/>
+                    <Entry ReturnType="Search"/>
+                    <Entry ReturnType="Send"/>
+                    <BoxView
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand"
+                        Color="Gray" />
+                </StackLayout>
+                
+                <StackLayout Spacing="10">
+                    <Label Text="Spell Check" FontSize="Medium"/>
+                    <Entry IsSpellCheckEnabled="true"/>
+                    <BoxView
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand"
+                        Color="Gray" />
+                </StackLayout>
+                
+                <StackLayout Spacing="10">
+                    <Label Text="Enabling and Disabling Text Prediction" FontSize="Medium"/>
+                    <Entry IsTextPredictionEnabled="false"/>
+                    <BoxView
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand"
+                        Color="Gray" />
+                </StackLayout>
+                
+                <StackLayout Spacing="10">
+                    <Label Text="Password" FontSize="Medium"/>
+                    <Entry IsPassword="true"/>
+                    <BoxView
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand"
+                        Color="Gray" />
+                </StackLayout>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

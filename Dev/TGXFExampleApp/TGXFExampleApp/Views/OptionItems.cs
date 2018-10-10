@@ -65,6 +65,13 @@ namespace TGXFExampleApp.Views
 
                 new OptionsItemMenu
                 {
+                    TitleOption = "Entry",
+                    TargetType = typeof(EntryPage),
+                    Group = 1
+                },
+
+                new OptionsItemMenu
+                {
                     TitleOption = "Picker Image",
                     TargetType = typeof(PickerImagePage),
                     Group = 2
