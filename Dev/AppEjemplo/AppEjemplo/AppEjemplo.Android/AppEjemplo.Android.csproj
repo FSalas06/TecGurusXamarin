@@ -82,6 +82,8 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\drawable\menu.png" />
+    <AndroidResource Include="Resources\drawable\devapp.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />
@@ -91,7 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AppEjemplo\AppEjemplo.csproj">
-      <Project>{EE397D17-8062-47D5-9E35-675B047A6E39}</Project>
+      <Project>{6D9A2F1B-0A29-4764-8CC9-DD3F4DBA1D42}</Project>
       <Name>AppEjemplo</Name>
     </ProjectReference>
   </ItemGroup>

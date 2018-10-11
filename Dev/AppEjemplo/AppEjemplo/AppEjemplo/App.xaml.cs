@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using AppEjemplo.Menu;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,7 +13,7 @@ namespace AppEjemplo
 		{
 			InitializeComponent();
 
-            MainPage = new NavigationPage(new SingleButtonNavigation());
+            MainPage = new MasterDetail();
 		}
 
 		protected override void OnStart ()

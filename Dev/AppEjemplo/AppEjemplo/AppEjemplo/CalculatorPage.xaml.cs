@@ -12,10 +12,9 @@ namespace AppEjemplo
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class CalculatorPage : ContentPage
 	{
-		public CalculatorPage (string val)
+		public CalculatorPage ()
 		{
 			InitializeComponent ();
-            PanelCalculator.Text = val;
 		}
 
         private void Button_Clicked(object sender, EventArgs e)

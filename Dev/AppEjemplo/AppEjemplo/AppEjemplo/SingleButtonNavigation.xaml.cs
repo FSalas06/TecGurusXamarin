@@ -19,7 +19,7 @@ namespace AppEjemplo
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new CalculatorPage("7"));
+            Navigation.PushAsync(new CalculatorPage());
         }
     }
 }
