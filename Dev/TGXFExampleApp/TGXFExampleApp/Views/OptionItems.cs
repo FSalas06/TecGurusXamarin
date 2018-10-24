@@ -5,6 +5,7 @@ using TGXFExampleApp.Views.FirstDay;
 using System.Linq;
 using TGXFExampleApp.Views.SecondDay;
 using TGXFExampleApp.Views.ExamplesApp.DepedencyExample;
+using TGXFExampleApp.Views.ExamplesApp.PackageControls.SyncFusionControls;
 
 namespace TGXFExampleApp.Views
 {
@@ -84,6 +85,12 @@ namespace TGXFExampleApp.Views
                     Group = 2
                 },
 
+                new OptionsItemMenu
+                {
+                    TitleOption = "ComboBox - Sync",
+                    TargetType = typeof(ComboboxPage),
+                    Group = 3
+                },
             };
 
             ObservableCollection<OptionsItemMenu> Option = 
@@ -105,7 +112,7 @@ namespace TGXFExampleApp.Views
                 {"Option 3",3},
                 {"Option 4",4},
             };
-
+           
             return PickerItem;
         }
 
@@ -137,6 +144,47 @@ namespace TGXFExampleApp.Views
                     Price = 1.30,
                     Group = "Fruit"
                 },
+            };
+
+            return Items;
+        }
+
+        public static List<ComboboxItem> PickerListItems()
+        {
+            var Items = new List<ComboboxItem>
+            {
+                new ComboboxItem
+                {
+                    Name = "Item1",
+                    Company = "Company1",
+                    Section = "Section1",
+                    Value = 1
+                },
+
+                new ComboboxItem
+                {
+                    Name = "Item2",
+                    Company = "Company2",
+                    Section = "Section2",
+                    Value = 2
+                },
+
+                new ComboboxItem
+                {
+                    Name = "Item3",
+                    Company = "Company3",
+                    Section = "Section3",
+                    Value = 3
+                },
+
+                new ComboboxItem
+                {
+                    Name = "Item4",
+                    Company = "Company4",
+                    Section = "Section4",
+                    Value = 4
+                },
+
             };
 
             return Items;

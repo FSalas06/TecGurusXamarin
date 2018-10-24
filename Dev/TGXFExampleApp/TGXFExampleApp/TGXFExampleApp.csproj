@@ -21,6 +21,11 @@
     <Folder Include="Views\ExamplesApp\RestServices\" />
     <Folder Include="Views\ExamplesApp\BarcodeScanner\" />
     <Folder Include="ViewModels\ExampleApp\BarcodeScanner\" />
+    <Folder Include="ViewModels\ExampleApp\PackageControls\" />
+    <Folder Include="Views\ExamplesApp\PackageControls\" />
+    <Folder Include="Views\ExamplesApp\PackageControls\SyncFusionControls\" />
+    <Folder Include="Views\ExamplesApp\PackageControls\CustomContols\" />
+    <Folder Include="ViewModels\ExampleApp\PackageControls\SyncFusionControls\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Views\FirstDay\FirstDayPage.xaml">
@@ -53,6 +58,7 @@
     <PackageReference Include="Xam.Plugin.Media" Version="4.0.1.5" />
     <PackageReference Include="ZXing.Net.Mobile" Version="2.4.1" />
     <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
+    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="16.3.0.21" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Views\ExamplesApp\DepedencyExample\CarouselExamplePage.xaml.cs">
