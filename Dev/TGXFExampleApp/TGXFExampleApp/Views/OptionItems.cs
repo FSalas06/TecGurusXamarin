@@ -6,6 +6,7 @@ using System.Linq;
 using TGXFExampleApp.Views.SecondDay;
 using TGXFExampleApp.Views.ExamplesApp.DepedencyExample;
 using TGXFExampleApp.Views.ExamplesApp.PackageControls.SyncFusionControls;
+using TGXFExampleApp.Views.ExamplesApp.PackageControls.CustomContols;
 
 namespace TGXFExampleApp.Views
 {
@@ -89,6 +90,13 @@ namespace TGXFExampleApp.Views
                 {
                     TitleOption = "ComboBox - Sync",
                     TargetType = typeof(ComboboxPage),
+                    Group = 3
+                },
+
+                new OptionsItemMenu
+                {
+                    TitleOption = "Custom control",
+                    TargetType = typeof(CustomControlPage),
                     Group = 3
                 },
             };
