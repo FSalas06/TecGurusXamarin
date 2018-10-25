@@ -7,9 +7,9 @@ using TGXFExampleApp.ViewModels.Shared;
 using TGXFExampleApp.Views;
 using Xamarin.Forms;
 
-namespace TGXFExampleApp.ViewModels.FirstDay
+namespace TGXFExampleApp.ViewModels.ExampleApp.PackageControls.SyncFusionControls
 {
-    public class FirstDayViewModel : BaseViewModel
+    public class SyncFusionViewModel : BaseViewModel
     {
         private ObservableCollection<OptionsItemMenu> _menuOptions;
         private OptionsItemMenu _singleOption;
@@ -27,7 +27,7 @@ namespace TGXFExampleApp.ViewModels.FirstDay
                 {
                     return;
                 }
-                if(SelectedOption.CanExecute(_singleOption))
+                if (SelectedOption.CanExecute(_singleOption))
                 {
                     SelectedOption.Execute(_singleOption);
                 }
@@ -49,7 +49,7 @@ namespace TGXFExampleApp.ViewModels.FirstDay
 
         public ICommand SelectedOption { get; set; }
 
-        public FirstDayViewModel()
+        public SyncFusionViewModel()
         {
             MenuOptions = new ObservableCollection<OptionsItemMenu>();
             SelectedOption = new Command<OptionsItemMenu>(OptionSelected);
@@ -58,14 +58,14 @@ namespace TGXFExampleApp.ViewModels.FirstDay
         public override void OnAppearing()
         {
             base.OnAppearing();
-            LoadFirstDay();
+            SyncFusionList();
         }
 
-        private void LoadFirstDay()
+        private void SyncFusionList()
         {
             try
             {
-                MenuOptions = OptionItems.OptionMenuItems(0);
+                MenuOptions = OptionItems.OptionMenuItems(3);
             }
             catch (Exception ex)
             {

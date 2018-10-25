@@ -4,6 +4,7 @@ using TGXFExampleApp.Views.ExamplesApp;
 using TGXFExampleApp.Views.ExamplesApp.BarcodeScanner;
 using TGXFExampleApp.Views.ExamplesApp.DepedencyExample;
 using TGXFExampleApp.Views.ExamplesApp.MiniSuperMarket;
+using TGXFExampleApp.Views.ExamplesApp.PackageControls.SyncFusionControls;
 using TGXFExampleApp.Views.ExamplesApp.RestServices;
 using TGXFExampleApp.Views.FirstDay;
 using TGXFExampleApp.Views.SecondDay;
@@ -37,7 +38,7 @@ namespace TGXFExampleApp.Views.Menu
 
             this.Add(new MenuItemMaster
             {
-                TitleOption = "Example 1 - Local Database (SQLite)",
+                TitleOption = "Example 1 - SQLite",
                 IconSource = "devday.png",
                 TargetType = typeof(SuperMarketProductListPage)
             });
@@ -61,6 +62,13 @@ namespace TGXFExampleApp.Views.Menu
                 TitleOption = "Example 4 - BarCode Scanner",
                 IconSource = "devday.png",
                 TargetType = typeof(BarcodePage)
+            });
+
+            this.Add(new MenuItemMaster
+            {
+                TitleOption = "Example 5 - Controls",
+                IconSource = "devday.png",
+                TargetType = typeof(SyncFusionPage)
             });
         }
     }
