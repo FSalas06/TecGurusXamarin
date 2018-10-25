@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
+using Acr.UserDialogs;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
@@ -28,6 +29,7 @@ namespace TGXFExampleApp.Droid
             base.OnCreate(bundle);
             Instance = this;
 
+            UserDialogs.Init(this);
             ZXing.Net.Mobile.Forms.Android.Platform.Init();
             CrossCurrentActivity.Current.Init(this, bundle);
 

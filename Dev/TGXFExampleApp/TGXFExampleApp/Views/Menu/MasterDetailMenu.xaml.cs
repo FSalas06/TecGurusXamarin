@@ -1,4 +1,6 @@
-﻿using TGXFExampleApp.ViewModels.Menu;
+﻿using Acr.UserDialogs;
+using System.Threading.Tasks;
+using TGXFExampleApp.ViewModels.Menu;
 using Xamarin.Forms;
 
 namespace TGXFExampleApp.Views.Menu

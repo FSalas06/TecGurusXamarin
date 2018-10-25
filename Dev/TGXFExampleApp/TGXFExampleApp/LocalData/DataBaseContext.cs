@@ -9,11 +9,8 @@ namespace TGXFExampleApp.LocalData
     {
         public DbSet<SupermarketItems> MySuperMarketList { get; set; }
 
-        readonly string pathDB;
-
-        public DataBaseContext(string pathDB)
+        public DataBaseContext()
         {
-            this.pathDB = pathDB;
             Database.EnsureCreated();
         }
 

@@ -9,7 +9,7 @@ namespace TGXFExampleApp
     public partial class App : Application
     {
         public static INavigation Navigation { get; set; }
-        private static DataBaseContext _db;
+        
 
         public App()
         {
@@ -22,13 +22,14 @@ namespace TGXFExampleApp
             Navigation = (Current.MainPage as MasterDetailPage).Detail.Navigation;
         }
 
+        private static DataBaseContext _db;
         public static DataBaseContext DB
         {
             get
             {
                 if (_db == null)
                 {
-                    _db = new DataBaseContext(Constants.NameDataBase);
+                    _db = new DataBaseContext();
                 }
                 return _db;
             }

@@ -1,5 +1,4 @@
-﻿using System;
-namespace TGXFExampleApp.Interfaces
+﻿namespace TGXFExampleApp.Interfaces
 {
     public interface IDataBase
     {

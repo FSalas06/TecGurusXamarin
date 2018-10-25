@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using Acr.UserDialogs;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -18,7 +21,23 @@ namespace TGXFExampleApp.ViewModels.Shared
             }
             set
             {
-                SetObservableProperty(ref _isBusy, value);
+                _isBusy = value;
+                try
+                {
+                    if (IsBusy)
+                    {
+                        UserDialogs.Instance.ShowLoading("Loading...", MaskType.Gradient);
+                    }
+                    else
+                    {
+                        UserDialogs.Instance.HideLoading();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"Can not display or hide Loading dialog, Error {ex.Message} Stack: {ex.StackTrace}");
+                }
+                OnPropertyChanged();
             }
         }
 
