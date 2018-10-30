@@ -1,4 +1,5 @@
-﻿using TGXFExampleApp.LocalData;
+﻿using Com.OneSignal;
+using TGXFExampleApp.LocalData;
 using TGXFExampleApp.Views.Menu;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -20,6 +21,9 @@ namespace TGXFExampleApp
             InitializeComponent();
             MainPage = new MasterDetailPageMenu();
             Navigation = (Current.MainPage as MasterDetailPage).Detail.Navigation;
+
+            OneSignal.Current.StartInit("50bca18a-6ef1-4563-a3fa-02f63ffa3304")
+                 .EndInit();
         }
 
         private static DataBaseContext _db;
