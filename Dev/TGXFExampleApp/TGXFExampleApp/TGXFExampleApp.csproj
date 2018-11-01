@@ -63,6 +63,7 @@
     <PackageReference Include="ZXing.Net.Mobile" Version="2.4.1" />
     <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
     <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="16.3.0.21" />
+    <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Views\ExamplesApp\DepedencyExample\CarouselExamplePage.xaml.cs">

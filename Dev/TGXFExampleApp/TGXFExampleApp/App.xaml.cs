@@ -1,4 +1,5 @@
 ﻿using Com.OneSignal;
+using TGXFExampleApp.Helpers;
 using TGXFExampleApp.LocalData;
 using TGXFExampleApp.Views.Menu;
 using Xamarin.Forms;
@@ -41,7 +42,10 @@ namespace TGXFExampleApp
 
         protected override void OnStart()
         {
-            // Handle when your app starts
+            if(string.IsNullOrEmpty(Settings.Username))
+            {
+                Settings.Username = "Francisco";
+            }
         }
 
         protected override void OnSleep()
