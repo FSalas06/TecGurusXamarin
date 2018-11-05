@@ -26,10 +26,11 @@
     <Folder Include="Views\ExamplesApp\PackageControls\SyncFusionControls\" />
     <Folder Include="Views\ExamplesApp\PackageControls\CustomContols\" />
     <Folder Include="ViewModels\ExampleApp\PackageControls\SyncFusionControls\" />
-    <Folder Include="Common\" />
-    <Folder Include="Common\Controls\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Update="Common\Controls\ProfileCustom.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\FirstDay\FirstDayPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

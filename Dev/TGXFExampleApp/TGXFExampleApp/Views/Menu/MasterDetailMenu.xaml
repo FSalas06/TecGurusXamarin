@@ -2,7 +2,21 @@
 <ContentPage
     x:Class="TGXFExampleApp.Views.Menu.MasterDetailMenu"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:custom="clr-namespace:TGXFExampleApp.Common.Controls">
     <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" VerticalOptions="CenterAndExpand">
+                <Label FontSize="Large" Text="Some text" />
+            </StackLayout>
+            <custom:ProfileCustom
+                Grid.Row="1"
+                CompanyText="{Binding CompanyProp}"
+                UsernameText="{Binding UsernameProp}" />
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
